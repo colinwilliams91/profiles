@@ -9,9 +9,10 @@
 # ****************************
 # _START_
 
-# create the file: `notepad $PROFILE.AllUsersAllHosts`
-# first time install: `PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force`
-# if installed, update: `PowerShellGet\Update-Module posh-git`
+# create the file: `code $PROFILE.AllUsersAllHosts`
+# install posh-git:
+    # first time install: `PowerShellGet\Install-Module posh-git -Scope CurrentUser -Force`
+    # if installed, update: `PowerShellGet\Update-Module posh-git`
 # copy the contents of this file into newly created `profile.ps1`
 # update the `Set-Location C:\Users\User\Dev` line to your Home directory
 
@@ -34,7 +35,7 @@ $colors = "#4B0082", "#FF69B4", "#FF00FF", "#00CED1", "#008B8B", "#8A2BE2", "#80
 $delimcolors = "#7FFF00", "#800000", "#FF8C00"
 # $colornames = "Indigo", "Pink", "Magenta", "Dark Turquoise", "Dark Cyan", "Blue Violet", "Purple", "Sky Blue", "Slate Blue", "Medium Spring Green"
 
-# See [Customization Variables](https://github.com/dahlbyk/posh-git?tab=readme-ov-file#customization-variables)
+# See [Posh-Git Customization Variables](https://github.com/dahlbyk/posh-git?tab=readme-ov-file#customization-variables)
 # "...On Performance" section for large repos causing terminal latency
 
 # Sets the default directory the shell will open in (this will force this dir, so, not great if opening files from multiple drives)
@@ -58,11 +59,12 @@ $postsuffix = $colors | Get-Random
 
 # GitPromptSettings [API Documentation](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt#v1x---customizing-the-posh-git-prompt)
 
-# Customizing Git-Posh-Prompt settings (`prompt` will overwrite if exists)
+# Customizing Git-Posh-Prompt settings (`prompt` fn will overwrite if exists)
 
 # change below to `$true` to abbreviate Home to `~` e.g. `~\Dev\profiles\` instead of `C:\Users\User\Dev\profiles\`
 $GitPromptSettings.DefaultPromptAbbreviateHomeDirectory = $false
 
+# Adjust .Text properties with ASCII characters to customize
 $GitPromptSettings.DefaultPromptPrefix.Text = "::"
 
 # to split prompt into two lines
