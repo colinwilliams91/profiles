@@ -37,8 +37,8 @@ $delimcolors = "#7FFF00", "#800000", "#FF8C00"
 # See [Customization Variables](https://github.com/dahlbyk/posh-git?tab=readme-ov-file#customization-variables)
 # "...On Performance" section for large repos causing terminal latency
 
-# Sets the default directory the shell will open in
-Set-Location C:\Users\User\Dev
+# Sets the default directory the shell will open in (this will force this dir, so, not great if opening files from multiple drives)
+# Set-Location C:\Users\User\Dev
 
 
 # _/END_INITIAL_
