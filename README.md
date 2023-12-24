@@ -13,6 +13,14 @@ _These scripts will incrementally fix this_
 
 ### `sans_git_posh.profile.ps1`
 - Template from user tamj0rd2 [stack overflow](https://stackoverflow.com/a/44411205/20575174)
-  - _Somewhat_ achieves Post-Git Git CLI Status :heavy_check_mark:
+  - _Somewhat_ achieves Posh-Git Git CLI Status :heavy_check_mark:
   - _Does not_ enable tab autocomplete for Git CLI :x:
   - _Does not_ enable tab autocomplete for Dotnet CLI :x:
+  - _Implements_ a cute color array and selects 2 random colors for command line on ps launch (`prompt()`)
+
+### `posh_git_home_dev.profile.ps1`
+- Template for install Posh-Git Module I use for Dev work on my Home machine
+  - _Implements_ Posh-Git for all Git tracking :heavy_check_mark:
+  - _Does_ enable tab autocomplete for Git CLI :heavy_check_mark:
+  - _Does_ enable tab autocomplete for Dotnet CLI :heavy_check_mark:
+  - _Implements_ a cute color array and selects 2 random colors for command line on ps launch (`prompt()`)
