@@ -33,7 +33,7 @@ _These scripts will incrementally fix this_
 - Copy the contents of the `*.profile.ps1` file you choose into newly created `profile.ps1`
 - Update the `Set-Location C:\Users\User\Dev` line to your Home directory (or leave it commented out)
 
-There are four different levels of profile persistence you can create:<sup>1</sup>
+<sup>1</sup>**There are four different levels of profile persistence you can create:**
 - If you want your profile script available in all your PowerShell hosts (console, ISE, etc) run this command `code $PROFILE.CurrentUserAllHosts`
 - If you want your profile script available in just the current host, run this command `code $PROFILE.CurrentUserCurrentHost`
 - If you want your profile script available for all users on the system, run this command `code $PROFILE.AllUsersAllHosts`
