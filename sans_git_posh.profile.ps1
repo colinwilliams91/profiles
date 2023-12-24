@@ -1,4 +1,6 @@
 # This profile will persist for all users and all hosts (Powershell Console)
+# it enables dotnet cli tab autocomplete, git status CLI && custom colors
+
 
 # Sets the default directory the shell will open in
 Set-Location C:\Users\User\Dev
