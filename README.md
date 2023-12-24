@@ -16,14 +16,14 @@ _These scripts will incrementally fix this_
   - _Somewhat_ achieves Posh-Git Git CLI Status :heavy_check_mark:
   - _Does not_ enable tab autocomplete for Git CLI :x:
   - _Does not_ enable tab autocomplete for Dotnet CLI :x:
-  - _Implements_ a cute color array and selects 2 random colors for command line on ps launch (`prompt()`)
+  - _Implements_ a cute color array and selects 2 random colors for command line on ps launch (`prompt()`) 🦝
 
 ### `posh_git_home_dev.profile.ps1`
 - Template for install Posh-Git Module I use for Dev work on my Home machine [API Documentation](https://github.com/dahlbyk/posh-git/wiki/Customizing-Your-PowerShell-Prompt#v1x---customizing-the-posh-git-prompt)
   - _Implements_ Posh-Git for all Git tracking :heavy_check_mark:
   - _Does_ enable tab autocomplete for Git CLI :heavy_check_mark:
   - _Does_ enable tab autocomplete for Dotnet CLI :heavy_check_mark:
-  - _Implements_ a cute color array and selects 2 random colors for command line on ps launch (`prompt()`)
+  - _Implements_ a cute color array and selects 2 random colors for command line on ps launch (`prompt()`) 🐯
 
 ## To Use
 - Create the file: `code $PROFILE.AllUsersAllHosts`<sup>1</sup>
