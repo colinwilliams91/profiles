@@ -261,3 +261,8 @@ function touch
         New-Item -ItemType File -Name ($file)
     }
 }
+
+# Gets and prints most recent commit to remote
+function gitLatestCommitUrl {
+  return "$($(git config --get remote.origin.url) -ireplace '\.git$', '')/commit/$(git rev-parse HEAD)"
+}
