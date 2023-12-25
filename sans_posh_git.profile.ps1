@@ -242,3 +242,22 @@ Register-ArgumentCompleter -Native -CommandName dotnet -ScriptBlock {
           [System.Management.Automation.CompletionResult]::new($_, $_, 'ParameterValue', $_)
       }
 }
+
+# Fn for `touch` like Bash `touch`
+function touch
+{
+    $file = $args[0]
+    if ($null -eq $file) {
+        throw "No filename supplied"
+    }
+
+    if (Test-Path $file)
+    {
+        throw "File already exists"
+    }
+    else
+    {
+        # echo $null > $file
+        New-Item -ItemType File -Name ($file)
+    }
+}
