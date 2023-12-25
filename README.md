@@ -9,6 +9,7 @@ _These scripts will incrementally fix this_
 - Git CLI autocomplete
 - Dotnet CLI autocomplete
 - Git tracking; status, remote, branch, and commit info
+- Implement `touch` fn like from Bash
 - Cute colors 😽
 
 ## Scripts
