@@ -11,6 +11,7 @@ _These scripts will incrementally fix this_
 - Git tracking; status, remote, branch, and commit info
 - Cute colors 😽
 
+## Scripts
 ### `sans_posh_git.profile.ps1`
 - Template from user tamj0rd2 [Stack Overflow](https://stackoverflow.com/a/44411205/20575174)
   - _Somewhat_ achieves Posh-Git Git CLI Status :heavy_check_mark:
