@@ -125,6 +125,9 @@ function gitLatestCommitUrl {
     return "$($(git config --get remote.origin.url) -ireplace '\.git$', '')/commit/$(git rev-parse HEAD)"
 }
 
+# Aliases (from Unix)
+Set-Alias ls-a { Get-ChildItem -Force }
+
 
 # _/END_HELPERS_
 # ****************************
