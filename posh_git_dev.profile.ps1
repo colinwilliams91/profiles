@@ -125,8 +125,13 @@ function gitLatestCommitUrl {
     return "$($(git config --get remote.origin.url) -ireplace '\.git$', '')/commit/$(git rev-parse HEAD)"
 }
 
+# Set-Alias cannot receive arguments for the cmdlet or function it will call, so we need to make a fn that scripts the arguments
+function listall {
+    Get-ChildItem -Force
+}
+
 # Aliases (from Unix)
-Set-Alias ls-a { Get-ChildItem -Force }
+Set-Alias ls-a listall
 
 
 # _/END_HELPERS_
