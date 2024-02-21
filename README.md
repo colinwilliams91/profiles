@@ -1,8 +1,8 @@
 # Powershell Profile Scripts
 
-_I made these scripts to customize the Windows Powershell Terminal_
-_Each script will also list what they achieve at the top of the file_
-_PS has basically no Tab autocomplete which is lame..._
+_I made these scripts to customize the Windows Powershell Terminal_\
+_Each script will also list what they achieve at the top of the file_\
+_PS has basically no Tab autocomplete which is lame..._\
 _These scripts will incrementally fix this_
 
 ## Purpose
