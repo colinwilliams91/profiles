@@ -130,9 +130,19 @@ function listall {
     Get-ChildItem -Force
 }
 
+function copyDirToClip {
+    param (
+        [Parameter(Mandatory=$false)]
+        [string]$Dir = "."
+    )
+    $Path = (Get-Item $Dir).FullName
+    $Path | Set-Clipboard
+    Write-Output "Copied $Path to Clipboard."
+}
+
 # Aliases (from Unix)
 Set-Alias ls-a listall
-
+Set-Alias cp-dir copyDirToClip
 
 # _/END_HELPERS_
 # ****************************
