@@ -5,5 +5,11 @@
     "style": ":nail_care::",
     "refactor": ":recycle::",
     "test": ":test_tube::",
-    "chore": ":computer::"
+    "chore": ":computer::",
+    "package": ":package::",
+    "packages": ":package::",
+    "install": ":package::",
+    "dependency": ":package::",
+    "dependencies": ":package::",
+    "deps": ":package::"
 }
