@@ -1,0 +1,9 @@
+{
+    "feat": ":sparkles::",
+    "fix": ":bug::",
+    "docs": ":memo::",
+    "style": ":nail_care::",
+    "refactor": ":recycle::",
+    "test": ":test_tube::",
+    "chore": ":computer::"
+}
