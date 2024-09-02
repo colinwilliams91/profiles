@@ -140,9 +140,66 @@ function copyDirToClip {
     Write-Output "Copied $Path to Clipboard."
 }
 
+function copyGitmojiToClip {
+    param (
+        [Parameter(Mandatory=$false)]
+        [string]$commitType = "chore"
+    )
+    # Load the JSON file
+    $emojiData = Get-Content -Raw -Path "E:\Dev\profiles\gitmoji.json" | ConvertFrom-Json
+
+    # Get the corresponding emoji short-code
+    $emoji = $emojiData.$commitType
+
+    # If emoji exists, copy to clipboard
+    if ($emoji) {
+        $emoji | Set-Clipboard
+        Write-Host "$emoji copied to clipboard!"
+    } else {
+        Write-Host "No emoji found matching commit type: $commitType"
+    }
+}
+
+function gitmojiCommit {
+    param (
+        [Parameter(Mandatory=$false)]
+        [string]$commitType = "chore",
+        [Parameter(Mandatory=$true)]
+        [string]$commitMessage
+    )
+
+    $emojiData = Get-Content -Raw -Path "E:\Dev\profiles\gitmoji.json" | ConvertFrom-Json
+
+    $emoji = $emojiData.$commitType
+
+    $output = ""
+
+    if ($emoji) {
+        $output = "$emoji $commitMessage"
+        git commit -m $output
+    } else {
+        Write-Host "No emoji found matching commit type: $commitType"
+    }
+}
+
+function gitSelectiveStage {
+    # run git status to read out all un-staged files
+    # option 1...
+    # git status | Set-Clipboard
+
+    # option 2...
+    git add -i
+    s | Set-Clipboard
+    q
+}
+
 # Aliases (from Unix)
 Set-Alias ls-a listall
 Set-Alias cp-dir copyDirToClip
+Set-Alias gmcp copyGitmojiToClip
+Set-Alias gmc gitmojiCommit
+## WORKING...
+Set-Alias gsa gitSelectiveStage
 
 # _/END_HELPERS_
 # ****************************
