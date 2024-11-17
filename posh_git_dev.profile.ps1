@@ -130,8 +130,24 @@ function listall {
     Get-ChildItem -Force
 }
 
+function copyDirToClip {
+    param (
+        [Parameter(Mandatory=$false)]
+        [string]$Dir = "."
+    )
+    $Path = (Get-Item $Dir).FullName
+    $Path | Set-Clipboard
+    Write-Output "Copied $Path to Clipboard."
+}
+
+function runAsAdmin {
+    Powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && %&'"
+}
+
 # Aliases (from Unix)
 Set-Alias ls-a listall
+Set-Alias cp-dir copyDirToClip
+Set-Alias sudo runAsAdmin
 
 
 # _/END_HELPERS_
