@@ -193,6 +193,8 @@ function gitSelectiveStage {
     q
 }
 
+# not currently working... error:
+# > '%*' is not recognized as an internal or external command, operable program or batch file.
 function runAsAdmin {
     Powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && %&'"
 }
