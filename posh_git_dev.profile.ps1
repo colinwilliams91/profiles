@@ -193,11 +193,16 @@ function gitSelectiveStage {
     q
 }
 
+function runAsAdmin {
+    Powershell -Command "Start-Process cmd -Verb RunAs -ArgumentList '/k cd /d %CD% && %&'"
+}
+
 # Aliases (from Unix)
 Set-Alias ls-a listall
 Set-Alias cp-dir copyDirToClip
 Set-Alias gmcp copyGitmojiToClip
 Set-Alias gmc gitmojiCommit
+Set-Alias sudo runAsAdmin
 ## WORKING...
 Set-Alias gsa gitSelectiveStage
 
